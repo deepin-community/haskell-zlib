@@ -1,0 +1,75 @@
+Source: haskell-zlib
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Joachim Breitner <nomeata@debian.org>
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8),
+ ghc-prof,
+ haskell-devscripts (>= 0.13),
+ zlib1g-dev,
+Build-Depends-Indep: ghc-doc
+Standards-Version: 4.1.4
+Homepage: http://hackage.haskell.org/package/zlib
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-zlib
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-zlib]
+
+Package: libghc-zlib-dev
+Architecture: any
+Depends: zlib1g-dev, ${haskell:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: Compression and decompression in the gzip and zlib formats${haskell:ShortBlurb}
+ This package provides a pure interface for compressing and decompressing
+ streams of data represented as lazy ByteStrings. It uses the zlib C library so
+ it has high performance. It supports the "zlib", "gzip" and "raw"
+ compression formats.
+ .
+ It provides a convenient high level API suitable for most tasks and for the
+ few cases where more control is needed it provides access to the full zlib
+ feature set.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-zlib-prof
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: Compression and decompression in the gzip and zlib formats${haskell:ShortBlurb}
+ This package provides a pure interface for compressing and decompressing
+ streams of data represented as lazy ByteStrings. It uses the zlib C library so
+ it has high performance. It supports the "zlib", "gzip" and "raw"
+ compression formats.
+ .
+ It provides a convenient high level API suitable for most tasks and for the
+ few cases where more control is needed it provides access to the full zlib
+ feature set.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-zlib-doc
+Architecture: all
+Section: doc
+Depends: ${haskell:Depends}, ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Conflicts: haskell-zlib-doc (<< 0.5.2.0-3)
+Provides: haskell-zlib-doc
+Replaces: haskell-zlib-doc (<< 0.5.2.0-3)
+Description: Compression and decompression in the gzip and zlib formats${haskell:ShortBlurb}
+ This package provides a pure interface for compressing and decompressing
+ streams of data represented as lazy ByteStrings. It uses the zlib C library so
+ it has high performance. It supports the "zlib", "gzip" and "raw"
+ compression formats.
+ .
+ It provides a convenient high level API suitable for most tasks and for the
+ few cases where more control is needed it provides access to the full zlib
+ feature set.
+ .
+ ${haskell:Blurb}
